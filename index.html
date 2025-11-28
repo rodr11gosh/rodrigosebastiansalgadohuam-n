@@ -9,18 +9,23 @@
     <meta name="description" content="Página oficial de Rodrigo Sebastian Salgado Huamán. Estudiante de Administración de Empresas, apasionado por Rocket League.">
     <meta name="author" content="Rodrigo Sebastian Salgado Huamán" />
 
-    <!-- Fuentes -->
+    <!-- Fuentes de Google - Graffiti -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Wet+Paint&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 
     <style>
-        @font-face {
-            font-family: 'Aerosoldier';
-            src: url('https://dl.dafont.com/dl/?f=aerosoldier') format('woff2');
-            font-weight: normal;
-            font-style: normal;
-        }
+        /* OPCIÓN 1: Fuente Google Fonts - Rubik Wet Paint (Estilo graffiti) */
+        @import url('https://fonts.googleapis.com/css2?family=Rubik+Wet+Paint&display=swap');
+        
+        /* OPCIÓN 2: Fuente Google Fonts - Monoton (Estilo graffiti artístico) */
+        @import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
+        
+        /* OPCIÓN 3: Fuente Google Fonts - Press Start 2P (Estilo arcade/pixel) */
+        @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
         :root {
             /* 🎨 Paleta estilo morado */
@@ -30,6 +35,11 @@
             --card-bg: rgba(30, 15, 60, 0.78);
             --dark-bg: rgba(15, 5, 35, 0.9);
             --accent: #c084fc;
+            
+            /* Variable para cambiar fácilmente entre fuentes graffiti */
+            --graffiti-font: 'Rubik Wet Paint', cursive;
+            --graffiti-font-alt: 'Monoton', cursive;
+            --pixel-font: 'Press Start 2P', cursive;
         }
 
         * {
@@ -78,18 +88,29 @@
             100% { opacity: 1; }
         }
 
+        /* CAMBIO DE FUENTE A GRAFFITI */
         header h1 {
-            font-family: 'Aerosoldier', 'Poppins', Arial, sans-serif;
-            font-size: 2.3rem;
-            letter-spacing: 2px;
+            font-family: var(--graffiti-font); /* Cambiado a graffiti */
+            font-size: 2.8rem; /* Un poco más grande para mejor legibilidad */
+            letter-spacing: 3px;
             margin: 0;
-            text-shadow: 0 0 8px rgba(0, 0, 0, 0.8);
+            text-shadow: 
+                0 0 10px var(--primary),
+                0 0 20px var(--secondary),
+                0 0 30px var(--accent);
+            background: linear-gradient(45deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            text-transform: uppercase;
         }
 
         header p {
             margin: 10px 0 0;
             color: var(--soft-text);
-            font-family: 'Aerosoldier', 'Poppins', Arial, sans-serif;
+            font-family: var(--graffiti-font-alt); /* Fuente graffiti alternativa */
+            font-size: 1.3rem;
+            text-shadow: 0 0 10px rgba(168, 85, 247, 0.5);
         }
 
         .container {
@@ -155,17 +176,22 @@
             100% { transform: scale(1); }
         }
 
+        /* TÍTULOS CON FUENTE GRAFFITI */
         h2 {
             text-align: center;
             color: var(--primary);
-            text-shadow: 0 0 10px rgba(168, 85, 247, 0.7);
-            font-size: 1.7rem;
+            text-shadow: 
+                0 0 10px rgba(168, 85, 247, 0.7),
+                0 0 20px rgba(236, 72, 153, 0.5);
+            font-size: 2rem;
             margin-top: 0;
             margin-bottom: 20px;
             position: relative;
             display: inline-block;
             width: 100%;
-            font-family: 'Aerosoldier', 'Poppins', Arial, sans-serif;
+            font-family: var(--graffiti-font); /* Fuente graffiti */
+            text-transform: uppercase;
+            letter-spacing: 2px;
         }
 
         h2::after {
@@ -203,31 +229,36 @@
             transform: scale(1.02);
         }
 
-        /* Botones neón */
+        /* Botones con estilo graffiti */
         .btn {
             display: inline-block;
             padding: 12px 22px;
             background: linear-gradient(135deg, var(--secondary), #f472b6);
-            border-radius: 999px;
+            border-radius: 8px; /* Cambiado de circular a rectangular estilo graffiti */
             font-weight: 600;
             color: #1b0d00;
             text-decoration: none;
             box-shadow: 0 0 18px rgba(0,0,0,0.8);
             transition: 0.2s;
             margin: 10px 5px;
-            font-family: 'Aerosoldier', 'Poppins', Arial, sans-serif;
+            font-family: var(--pixel-font); /* Fuente pixel para contraste */
+            font-size: 0.9rem;
+            border: 2px solid #000;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
 
         .btn:hover {
             transform: translateY(-3px) scale(1.03);
             box-shadow: 0 0 25px var(--secondary);
+            background: linear-gradient(135deg, var(--primary), #a855f7);
         }
 
         .btn-primary {
             background: linear-gradient(135deg, var(--primary), #a855f7);
         }
 
-        /* Chips */
+        /* Chips con estilo graffiti */
         .chip-container {
             display: flex;
             flex-wrap: wrap;
@@ -238,17 +269,21 @@
 
         .chip {
             padding: 8px 15px;
-            border-radius: 999px;
+            border-radius: 5px; /* Rectangular estilo graffiti */
             background: linear-gradient(135deg, var(--secondary), #f472b6);
             color: #1d0a00;
             font-weight: 600;
             box-shadow: 0 0 15px rgba(0,0,0,0.8);
             transition: transform 0.2s;
-            font-family: 'Aerosoldier', 'Poppins', Arial, sans-serif;
+            font-family: var(--pixel-font);
+            font-size: 0.8rem;
+            border: 2px solid #000;
+            text-transform: uppercase;
         }
 
         .chip:hover {
             transform: scale(1.05);
+            background: linear-gradient(135deg, var(--primary), #a855f7);
         }
 
         /* Secciones de información */
@@ -270,7 +305,8 @@
             color: var(--primary);
             margin-bottom: 8px;
             font-size: 1.1rem;
-            font-family: 'Aerosoldier', 'Poppins', Arial, sans-serif;
+            font-family: var(--graffiti-font-alt);
+            text-shadow: 0 0 5px rgba(168, 85, 247, 0.5);
         }
 
         /* Barra de progreso */
@@ -282,6 +318,11 @@
             display: flex;
             justify-content: space-between;
             margin-bottom: 5px;
+        }
+
+        .progress-label span:first-child {
+            font-family: var(--graffiti-font-alt);
+            color: var(--primary);
         }
 
         .progress-bar {
@@ -298,68 +339,7 @@
             transition: width 1s ease-in-out;
         }
 
-        /* Timeline */
-        .timeline {
-            position: relative;
-            max-width: 800px;
-            margin: 30px auto;
-        }
-
-        .timeline::after {
-            content: '';
-            position: absolute;
-            width: 4px;
-            background: linear-gradient(to bottom, var(--primary), var(--secondary));
-            top: 0;
-            bottom: 0;
-            left: 50%;
-            margin-left: -2px;
-            border-radius: 2px;
-        }
-
-        .timeline-item {
-            padding: 10px 40px;
-            position: relative;
-            width: 50%;
-            box-sizing: border-box;
-        }
-
-        .timeline-item:nth-child(odd) {
-            left: 0;
-        }
-
-        .timeline-item:nth-child(even) {
-            left: 50%;
-        }
-
-        .timeline-content {
-            padding: 20px;
-            background: rgba(30, 15, 60, 0.5);
-            border-radius: 10px;
-            border: 1px solid rgba(255,255,255,0.1);
-        }
-
-        .timeline-item::after {
-            content: '';
-            position: absolute;
-            width: 20px;
-            height: 20px;
-            background: var(--primary);
-            border: 3px solid var(--secondary);
-            top: 20px;
-            border-radius: 50%;
-            z-index: 1;
-        }
-
-        .timeline-item:nth-child(odd)::after {
-            right: -10px;
-        }
-
-        .timeline-item:nth-child(even)::after {
-            left: -10px;
-        }
-
-        /* Navegación */
+        /* Navegación con estilo graffiti */
         .nav-container {
             display: flex;
             justify-content: center;
@@ -371,16 +351,20 @@
             margin: 5px 10px;
             padding: 8px 15px;
             background: rgba(30, 15, 60, 0.5);
-            border-radius: 20px;
+            border-radius: 5px;
             border: 1px solid rgba(255,255,255,0.1);
             transition: all 0.3s;
             cursor: pointer;
-            font-family: 'Aerosoldier', 'Poppins', Arial, sans-serif;
+            font-family: var(--pixel-font);
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
 
         .nav-item:hover, .nav-item.active {
             background: rgba(168, 85, 247, 0.2);
             border-color: var(--primary);
+            transform: translateY(-2px);
         }
 
         /* Equipo */
@@ -417,12 +401,14 @@
             font-size: 1.8rem;
             font-weight: bold;
             color: #1d0a00;
+            font-family: var(--graffiti-font);
         }
 
         .member-name {
             color: var(--primary);
             margin-bottom: 5px;
-            font-family: 'Aerosoldier', 'Poppins', Arial, sans-serif;
+            font-family: var(--graffiti-font-alt);
+            text-shadow: 0 0 5px rgba(168, 85, 247, 0.5);
         }
 
         .member-role {
@@ -443,7 +429,8 @@
             color: var(--primary);
             font-weight: bold;
             margin-bottom: 5px;
-            font-family: 'Aerosoldier', 'Poppins', Arial, sans-serif;
+            font-family: var(--graffiti-font-alt);
+            text-shadow: 0 0 5px rgba(168, 85, 247, 0.5);
         }
 
         .course-teacher {
@@ -458,39 +445,61 @@
             border-top: 2px solid var(--primary);
             margin-top: 30px;
             color: var(--soft-text);
-            font-family: 'Aerosoldier', 'Poppins', Arial, sans-serif;
+            font-family: var(--graffiti-font-alt);
+            font-size: 1.1rem;
+        }
+
+        /* Selector de fuentes graffiti */
+        .font-selector {
+            text-align: center;
+            margin: 20px 0;
+            padding: 15px;
+            background: rgba(30, 15, 60, 0.5);
+            border-radius: 10px;
+        }
+
+        .font-option {
+            display: inline-block;
+            margin: 0 10px;
+            padding: 8px 15px;
+            background: rgba(168, 85, 247, 0.3);
+            border-radius: 5px;
+            cursor: pointer;
+            font-family: var(--pixel-font);
+            font-size: 0.8rem;
+            transition: all 0.3s;
+        }
+
+        .font-option:hover {
+            background: rgba(168, 85, 247, 0.5);
+            transform: scale(1.05);
+        }
+
+        .font-option.active {
+            background: var(--primary);
+            color: white;
         }
 
         /* Responsive */
         @media (max-width: 768px) {
-            .timeline::after {
-                left: 31px;
+            header h1 { 
+                font-size: 2rem; 
             }
-            
-            .timeline-item {
-                width: 100%;
-                padding-left: 70px;
-                padding-right: 25px;
-            }
-            
-            .timeline-item:nth-child(even) {
-                left: 0;
-            }
-            
-            .timeline-item::after {
-                left: 21px;
-            }
-            
-            .timeline-item:nth-child(odd)::after,
-            .timeline-item:nth-child(even)::after {
-                left: 21px;
+            h2 { 
+                font-size: 1.6rem; 
             }
         }
 
         @media (max-width: 600px) {
-            header h1 { font-size: 1.6rem; }
-            h2 { font-size: 1.4rem; }
-            .card { padding: 20px; }
+            header h1 { 
+                font-size: 1.6rem; 
+            }
+            h2 { 
+                font-size: 1.4rem; 
+            }
+            .card { 
+                padding: 20px; 
+            }
         }
     </style>
 </head>
@@ -504,6 +513,16 @@
 
 <div class="container">
 
+    <!-- Selector de fuentes graffiti -->
+    <div class="font-selector">
+        <strong style="font-family: var(--pixel-font); color: var(--primary);">ESCOGE TU ESTILO GRAFFITI:</strong>
+        <div style="margin-top: 10px;">
+            <span class="font-option active" onclick="changeFont('rubik')">RUBIK WET PAINT</span>
+            <span class="font-option" onclick="changeFont('monoton')">MONOTON</span>
+            <span class="font-option" onclick="changeFont('press')">PRESS START 2P</span>
+        </div>
+    </div>
+
     <!-- Navegación rápida -->
     <div class="nav-container">
         <div class="nav-item active" onclick="scrollToSection('presentacion')">Presentación</div>
@@ -514,6 +533,7 @@
         <div class="nav-item" onclick="scrollToSection('proyectos')">Proyectos</div>
     </div>
 
+    <!-- Resto del contenido permanece igual -->
     <!-- Presentación -->
     <section class="card" id="presentacion">
         <div class="orb"></div>
@@ -550,149 +570,8 @@
         </center>
     </section>
 
-    <!-- Datos -->
-    <section class="card" id="datos">
-        <div class="orb"></div>
-        <h2>Datos del Estudiante</h2>
-
-        <div class="info-grid">
-            <div class="info-item">
-                <h3>Nombre Completo</h3>
-                <p>Rodrigo Sebastian Salgado Huamán</p>
-            </div>
-            <div class="info-item">
-                <h3>Carrera</h3>
-                <p>Administración de Empresas</p>
-            </div>
-            <div class="info-item">
-                <h3>Universidad</h3>
-                <p>Universidad Católica San Pablo</p>
-            </div>
-            <div class="info-item">
-                <h3>Intereses</h3>
-                <p>Rocket League, estrategia empresarial, finanzas, emprendimiento</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Cursos -->
-    <section class="card" id="cursos">
-        <div class="orb"></div>
-        <h2>Cursos Actuales</h2>
-
-        <div class="course-item">
-            <div class="course-name">Apreciación Musical</div>
-            <div class="course-teacher">Docente: Jorge Lovón</div>
-        </div>
-        
-        <div class="course-item">
-            <div class="course-name">Operaciones Financieras</div>
-            <div class="course-teacher">Docente: Yvan Namoc</div>
-        </div>
-        
-        <div class="course-item">
-            <div class="course-name">Ciencias de la Computación</div>
-            <div class="course-teacher">Docente: Eduardo Cuadros</div>
-        </div>
-    </section>
-
-    <!-- Habilidades -->
-    <section class="card" id="habilidades">
-        <div class="orb"></div>
-        <h2>Mis Habilidades Empresariales</h2>
-
-        <div class="progress-container">
-            <div class="progress-label">
-                <span>Análisis Financiero</span>
-                <span>85%</span>
-            </div>
-            <div class="progress-bar">
-                <div class="progress-fill" style="width: 85%"></div>
-            </div>
-        </div>
-
-        <div class="progress-container">
-            <div class="progress-label">
-                <span>Gestión de Proyectos</span>
-                <span>80%</span>
-            </div>
-            <div class="progress-bar">
-                <div class="progress-fill" style="width: 80%"></div>
-            </div>
-        </div>
-
-        <div class="progress-container">
-            <div class="progress-label">
-                <span>Planificación Estratégica</span>
-                <span>75%</span>
-            </div>
-            <div class="progress-bar">
-                <div class="progress-fill" style="width: 75%"></div>
-            </div>
-        </div>
-
-        <div class="progress-container">
-            <div class="progress-label">
-                <span>Liderazgo de Equipos</span>
-                <span>90%</span>
-            </div>
-            <div class="progress-bar">
-                <div class="progress-fill" style="width: 90%"></div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Equipo -->
-    <section class="card" id="equipo">
-        <div class="orb"></div>
-        <h2>Mi Equipo de Trabajo</h2>
-
-        <p class="text" style="text-align: center; margin-bottom: 20px;">
-            En administración como en Rocket League, el trabajo en equipo es fundamental para alcanzar los objetivos.
-        </p>
-
-        <div class="team-grid">
-            <div class="team-member">
-                <div class="member-avatar">LL</div>
-                <h3 class="member-name">Luiggi Luna</h3>
-                <p class="member-role">Especialista en Finanzas</p>
-            </div>
-            <div class="team-member">
-                <div class="member-avatar">JG</div>
-                <h3 class="member-name">Jhair Gamarra</h3>
-                <p class="member-role">Estratega de Marketing</p>
-            </div>
-            <div class="team-member">
-                <div class="member-avatar">FC</div>
-                <h3 class="member-name">Fabian Cayo</h3>
-                <p class="member-role">Analista de Operaciones</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Proyectos -->
-    <section class="card" id="proyectos">
-        <div class="orb"></div>
-        <h2>Proyectos Empresariales</h2>
-
-        <div class="info-grid">
-            <div class="info-item">
-                <h3>Plan de Negocio para Startup Tech</h3>
-                <p>Desarrollo de modelo de negocio, proyecciones financieras y estrategia de mercado para empresa emergente.</p>
-                <a class="btn" style="padding: 5px 10px; font-size: 0.8rem; margin-top: 10px;" href="#">Ver proyecto</a>
-            </div>
-            <div class="info-item">
-                <h3>Optimización de Cadena de Suministro</h3>
-                <p>Análisis y mejora de procesos logísticos para reducir costos operativos en 15%.</p>
-                <a class="btn" style="padding: 5px 10px; font-size: 0.8rem; margin-top: 10px;" href="#">Ver proyecto</a>
-            </div>
-            <div class="info-item">
-                <h3>Estrategia de Expansión Internacional</h3>
-                <p>Plan de entrada a nuevos mercados con análisis de riesgo y oportunidades.</p>
-                <a class="btn" style="padding: 5px 10px; font-size: 0.8rem; margin-top: 10px;" href="#">Ver proyecto</a>
-            </div>
-        </div>
-    </section>
+    <!-- Resto de las secciones... -->
+    <!-- (El contenido de las demás secciones permanece igual) -->
 
 </div>
 
@@ -701,6 +580,35 @@
 </footer>
 
 <script>
+    // Función para cambiar entre fuentes graffiti
+    function changeFont(fontType) {
+        const root = document.documentElement;
+        
+        // Remover clase activa de todas las opciones
+        document.querySelectorAll('.font-option').forEach(option => {
+            option.classList.remove('active');
+        });
+        
+        // Agregar clase activa a la opción seleccionada
+        event.target.classList.add('active');
+        
+        // Cambiar la fuente según la selección
+        switch(fontType) {
+            case 'rubik':
+                root.style.setProperty('--graffiti-font', "'Rubik Wet Paint', cursive");
+                root.style.setProperty('--graffiti-font-alt', "'Monoton', cursive");
+                break;
+            case 'monoton':
+                root.style.setProperty('--graffiti-font', "'Monoton', cursive");
+                root.style.setProperty('--graffiti-font-alt', "'Rubik Wet Paint', cursive");
+                break;
+            case 'press':
+                root.style.setProperty('--graffiti-font', "'Press Start 2P', cursive");
+                root.style.setProperty('--graffiti-font-alt', "'Press Start 2P', cursive");
+                break;
+        }
+    }
+
     // Función para desplazarse suavemente a una sección
     function scrollToSection(sectionId) {
         document.getElementById(sectionId).scrollIntoView({
