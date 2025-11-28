@@ -6,27 +6,15 @@
     <title>Rodrigo Sebastian Salgado Huamán - Administración de Empresas</title>
 
     <!-- SEO -->
-    <meta name="description" content="Página oficial de Rodrigo Sebastian Salgado Huamán. Estudiante de Administración de Empresas, apasionado por Rocket League.">
+    <meta name="description" content="Página oficial de Rodrigo Sebastian Salgado Huamán. Estudiante de Administración de Empresas.">
     <meta name="author" content="Rodrigo Sebastian Salgado Huamán" />
 
-    <!-- Fuentes de Google - Graffiti -->
+    <!-- Fuente Press Start 2P -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Rubik+Wet+Paint&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 
     <style>
-        /* OPCIÓN 1: Fuente Google Fonts - Rubik Wet Paint (Estilo graffiti) */
-        @import url('https://fonts.googleapis.com/css2?family=Rubik+Wet+Paint&display=swap');
-        
-        /* OPCIÓN 2: Fuente Google Fonts - Monoton (Estilo graffiti artístico) */
-        @import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
-        
-        /* OPCIÓN 3: Fuente Google Fonts - Press Start 2P (Estilo arcade/pixel) */
-        @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
-
         :root {
             /* 🎨 Paleta estilo morado */
             --primary: #a855f7;
@@ -35,11 +23,6 @@
             --card-bg: rgba(30, 15, 60, 0.78);
             --dark-bg: rgba(15, 5, 35, 0.9);
             --accent: #c084fc;
-            
-            /* Variable para cambiar fácilmente entre fuentes graffiti */
-            --graffiti-font: 'Rubik Wet Paint', cursive;
-            --graffiti-font-alt: 'Monoton', cursive;
-            --pixel-font: 'Press Start 2P', cursive;
         }
 
         * {
@@ -50,11 +33,12 @@
 
         body {
             margin: 0;
-            font-family: "Poppins", Arial, sans-serif;
+            font-family: "Press Start 2P", cursive;
             color: white;
             line-height: 1.6;
+            font-size: 10px;
 
-            /* 🟪 FONDO NUEVO */
+            /* 🟪 FONDO */
             background: 
                 linear-gradient(rgba(15, 5, 35, 0.75), rgba(15, 5, 35, 0.9)),
                 url('https://wallpapercave.com/wp/wp8068809.png') no-repeat center center fixed;
@@ -64,7 +48,7 @@
         /* HEADER */
         header {
             text-align: center;
-            padding: 40px 20px;
+            padding: 30px 20px;
             background: rgba(15, 5, 35, 0.6);
             backdrop-filter: blur(6px);
             border-bottom: 2px solid var(--primary);
@@ -88,46 +72,39 @@
             100% { opacity: 1; }
         }
 
-        /* CAMBIO DE FUENTE A GRAFFITI */
         header h1 {
-            font-family: var(--graffiti-font); /* Cambiado a graffiti */
-            font-size: 2.8rem; /* Un poco más grande para mejor legibilidad */
-            letter-spacing: 3px;
+            font-family: "Press Start 2P", cursive;
+            font-size: 1.4rem;
+            letter-spacing: 1px;
             margin: 0;
             text-shadow: 
                 0 0 10px var(--primary),
-                0 0 20px var(--secondary),
-                0 0 30px var(--accent);
-            background: linear-gradient(45deg, var(--primary), var(--secondary));
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-            text-transform: uppercase;
+                0 0 20px var(--secondary);
+            line-height: 1.4;
         }
 
         header p {
-            margin: 10px 0 0;
+            margin: 15px 0 0;
             color: var(--soft-text);
-            font-family: var(--graffiti-font-alt); /* Fuente graffiti alternativa */
-            font-size: 1.3rem;
-            text-shadow: 0 0 10px rgba(168, 85, 247, 0.5);
+            font-family: "Press Start 2P", cursive;
+            font-size: 0.6rem;
         }
 
         .container {
             max-width: 1000px;
-            margin: 30px auto;
-            padding: 20px;
+            margin: 20px auto;
+            padding: 15px;
         }
 
         /* Cards estilo glass */
         .card {
             background: var(--card-bg);
-            padding: 30px;
-            border-radius: 18px;
-            border: 1px solid rgba(255,255,255,0.12);
+            padding: 25px;
+            border-radius: 10px;
+            border: 2px solid var(--primary);
             box-shadow: 0 8px 40px rgba(0,0,0,0.7);
             backdrop-filter: blur(12px);
-            margin-bottom: 30px;
+            margin-bottom: 25px;
             position: relative;
             overflow: hidden;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -138,31 +115,12 @@
             box-shadow: 0 15px 50px rgba(0,0,0,0.8);
         }
 
-        .card::before {
-            content: "";
-            position: absolute;
-            inset: -2px;
-            background: conic-gradient(
-                var(--primary),
-                var(--secondary),
-                var(--accent),
-                var(--primary)
-            );
-            opacity: 0;
-            transition: 0.4s;
-            z-index: -1;
-        }
-
-        .card:hover::before {
-            opacity: 0.4;
-        }
-
         .orb {
-            width: 40px;
-            height: 40px;
+            width: 30px;
+            height: 30px;
             position: absolute;
-            top: -15px;
-            right: -15px;
+            top: -10px;
+            right: -10px;
             border-radius: 50%;
             background: radial-gradient(circle, white, var(--primary), #5b21b6);
             box-shadow: 0 0 15px var(--primary);
@@ -176,22 +134,18 @@
             100% { transform: scale(1); }
         }
 
-        /* TÍTULOS CON FUENTE GRAFFITI */
         h2 {
             text-align: center;
             color: var(--primary);
-            text-shadow: 
-                0 0 10px rgba(168, 85, 247, 0.7),
-                0 0 20px rgba(236, 72, 153, 0.5);
-            font-size: 2rem;
+            text-shadow: 0 0 10px rgba(168, 85, 247, 0.7);
+            font-size: 1rem;
             margin-top: 0;
             margin-bottom: 20px;
             position: relative;
             display: inline-block;
             width: 100%;
-            font-family: var(--graffiti-font); /* Fuente graffiti */
-            text-transform: uppercase;
-            letter-spacing: 2px;
+            font-family: "Press Start 2P", cursive;
+            line-height: 1.4;
         }
 
         h2::after {
@@ -205,9 +159,10 @@
         }
 
         .text {
-            font-size: 1rem;
-            line-height: 1.7;
+            font-size: 0.7rem;
+            line-height: 1.6;
             color: var(--soft-text);
+            font-family: "Press Start 2P", cursive;
         }
 
         /* Imagen central personal */
@@ -218,10 +173,10 @@
 
         .hero-image {
             width: 100%;
-            max-width: 300px;
-            border-radius: 16px;
+            max-width: 250px;
+            border-radius: 10px;
             border: 2px solid var(--primary);
-            box-shadow: 0 0 35px rgba(168, 85, 247, 0.6);
+            box-shadow: 0 0 25px rgba(168, 85, 247, 0.6);
             transition: transform 0.3s ease;
         }
 
@@ -229,28 +184,27 @@
             transform: scale(1.02);
         }
 
-        /* Botones con estilo graffiti */
+        /* Botones estilo pixel */
         .btn {
             display: inline-block;
-            padding: 12px 22px;
+            padding: 10px 18px;
             background: linear-gradient(135deg, var(--secondary), #f472b6);
-            border-radius: 8px; /* Cambiado de circular a rectangular estilo graffiti */
-            font-weight: 600;
+            border-radius: 0;
+            font-weight: normal;
             color: #1b0d00;
             text-decoration: none;
-            box-shadow: 0 0 18px rgba(0,0,0,0.8);
+            box-shadow: 0 4px 0 #000;
             transition: 0.2s;
-            margin: 10px 5px;
-            font-family: var(--pixel-font); /* Fuente pixel para contraste */
-            font-size: 0.9rem;
+            margin: 8px 5px;
+            font-family: "Press Start 2P", cursive;
+            font-size: 0.6rem;
             border: 2px solid #000;
             text-transform: uppercase;
-            letter-spacing: 1px;
         }
 
         .btn:hover {
-            transform: translateY(-3px) scale(1.03);
-            box-shadow: 0 0 25px var(--secondary);
+            transform: translateY(2px);
+            box-shadow: 0 2px 0 #000;
             background: linear-gradient(135deg, var(--primary), #a855f7);
         }
 
@@ -258,55 +212,56 @@
             background: linear-gradient(135deg, var(--primary), #a855f7);
         }
 
-        /* Chips con estilo graffiti */
+        /* Chips estilo pixel */
         .chip-container {
             display: flex;
             flex-wrap: wrap;
-            gap: 10px;
+            gap: 8px;
             justify-content: center;
             margin-top: 15px;
         }
 
         .chip {
-            padding: 8px 15px;
-            border-radius: 5px; /* Rectangular estilo graffiti */
+            padding: 6px 12px;
+            border-radius: 0;
             background: linear-gradient(135deg, var(--secondary), #f472b6);
             color: #1d0a00;
-            font-weight: 600;
-            box-shadow: 0 0 15px rgba(0,0,0,0.8);
+            font-weight: normal;
+            box-shadow: 0 3px 0 #000;
             transition: transform 0.2s;
-            font-family: var(--pixel-font);
-            font-size: 0.8rem;
+            font-family: "Press Start 2P", cursive;
+            font-size: 0.5rem;
             border: 2px solid #000;
             text-transform: uppercase;
         }
 
         .chip:hover {
-            transform: scale(1.05);
+            transform: translateY(2px);
+            box-shadow: 0 1px 0 #000;
             background: linear-gradient(135deg, var(--primary), #a855f7);
         }
 
         /* Secciones de información */
         .info-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
             margin-top: 20px;
         }
 
         .info-item {
             background: rgba(30, 15, 60, 0.5);
-            padding: 15px;
-            border-radius: 10px;
+            padding: 12px;
+            border-radius: 5px;
             border-left: 3px solid var(--primary);
+            border: 2px solid var(--primary);
         }
 
         .info-item h3 {
             color: var(--primary);
             margin-bottom: 8px;
-            font-size: 1.1rem;
-            font-family: var(--graffiti-font-alt);
-            text-shadow: 0 0 5px rgba(168, 85, 247, 0.5);
+            font-size: 0.7rem;
+            font-family: "Press Start 2P", cursive;
         }
 
         /* Barra de progreso */
@@ -317,188 +272,172 @@
         .progress-label {
             display: flex;
             justify-content: space-between;
-            margin-bottom: 5px;
+            margin-bottom: 8px;
+        }
+
+        .progress-label span {
+            font-family: "Press Start 2P", cursive;
+            font-size: 0.6rem;
         }
 
         .progress-label span:first-child {
-            font-family: var(--graffiti-font-alt);
             color: var(--primary);
         }
 
         .progress-bar {
-            height: 10px;
+            height: 12px;
             background: rgba(255,255,255,0.1);
-            border-radius: 5px;
+            border-radius: 0;
             overflow: hidden;
+            border: 2px solid #000;
         }
 
         .progress-fill {
             height: 100%;
             background: linear-gradient(90deg, var(--primary), var(--secondary));
-            border-radius: 5px;
+            border-radius: 0;
             transition: width 1s ease-in-out;
         }
 
-        /* Navegación con estilo graffiti */
+        /* Navegación estilo pixel */
         .nav-container {
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
-            margin: 20px 0;
+            margin: 15px 0;
+            gap: 8px;
         }
 
         .nav-item {
-            margin: 5px 10px;
-            padding: 8px 15px;
+            margin: 0;
+            padding: 6px 12px;
             background: rgba(30, 15, 60, 0.5);
-            border-radius: 5px;
-            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 0;
+            border: 2px solid var(--primary);
             transition: all 0.3s;
             cursor: pointer;
-            font-family: var(--pixel-font);
-            font-size: 0.8rem;
+            font-family: "Press Start 2P", cursive;
+            font-size: 0.5rem;
             text-transform: uppercase;
-            letter-spacing: 1px;
+            box-shadow: 0 3px 0 #000;
         }
 
         .nav-item:hover, .nav-item.active {
-            background: rgba(168, 85, 247, 0.2);
-            border-color: var(--primary);
-            transform: translateY(-2px);
+            background: rgba(168, 85, 247, 0.3);
+            transform: translateY(2px);
+            box-shadow: 0 1px 0 #000;
         }
 
         /* Equipo */
         .team-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 15px;
             margin-top: 20px;
         }
 
         .team-member {
             background: rgba(30, 15, 60, 0.5);
-            padding: 20px;
-            border-radius: 10px;
+            padding: 15px;
+            border-radius: 5px;
             text-align: center;
-            border: 1px solid rgba(255,255,255,0.1);
+            border: 2px solid var(--primary);
             transition: transform 0.3s;
         }
 
         .team-member:hover {
             transform: translateY(-5px);
-            border-color: var(--primary);
+            border-color: var(--secondary);
         }
 
         .member-avatar {
-            width: 80px;
-            height: 80px;
-            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            border-radius: 0;
             background: linear-gradient(135deg, var(--primary), var(--secondary));
-            margin: 0 auto 15px;
+            margin: 0 auto 12px;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.8rem;
-            font-weight: bold;
+            font-size: 1.2rem;
+            font-weight: normal;
             color: #1d0a00;
-            font-family: var(--graffiti-font);
+            font-family: "Press Start 2P", cursive;
+            border: 2px solid #000;
         }
 
         .member-name {
             color: var(--primary);
             margin-bottom: 5px;
-            font-family: var(--graffiti-font-alt);
-            text-shadow: 0 0 5px rgba(168, 85, 247, 0.5);
+            font-family: "Press Start 2P", cursive;
+            font-size: 0.6rem;
         }
 
         .member-role {
             color: var(--soft-text);
-            font-size: 0.9rem;
+            font-size: 0.5rem;
+            font-family: "Press Start 2P", cursive;
         }
 
         /* Cursos */
         .course-item {
             background: rgba(30, 15, 60, 0.5);
-            padding: 15px;
-            border-radius: 10px;
-            margin-bottom: 15px;
-            border-left: 3px solid var(--primary);
+            padding: 12px;
+            border-radius: 5px;
+            margin-bottom: 12px;
+            border: 2px solid var(--primary);
         }
 
         .course-name {
             color: var(--primary);
-            font-weight: bold;
             margin-bottom: 5px;
-            font-family: var(--graffiti-font-alt);
-            text-shadow: 0 0 5px rgba(168, 85, 247, 0.5);
+            font-family: "Press Start 2P", cursive;
+            font-size: 0.6rem;
         }
 
         .course-teacher {
             color: var(--soft-text);
-            font-style: italic;
+            font-size: 0.5rem;
+            font-family: "Press Start 2P", cursive;
         }
 
         footer {
             text-align: center;
-            padding: 20px;
+            padding: 15px;
             background: rgba(15, 5, 35, 0.7);
             border-top: 2px solid var(--primary);
-            margin-top: 30px;
+            margin-top: 25px;
             color: var(--soft-text);
-            font-family: var(--graffiti-font-alt);
-            font-size: 1.1rem;
-        }
-
-        /* Selector de fuentes graffiti */
-        .font-selector {
-            text-align: center;
-            margin: 20px 0;
-            padding: 15px;
-            background: rgba(30, 15, 60, 0.5);
-            border-radius: 10px;
-        }
-
-        .font-option {
-            display: inline-block;
-            margin: 0 10px;
-            padding: 8px 15px;
-            background: rgba(168, 85, 247, 0.3);
-            border-radius: 5px;
-            cursor: pointer;
-            font-family: var(--pixel-font);
-            font-size: 0.8rem;
-            transition: all 0.3s;
-        }
-
-        .font-option:hover {
-            background: rgba(168, 85, 247, 0.5);
-            transform: scale(1.05);
-        }
-
-        .font-option.active {
-            background: var(--primary);
-            color: white;
+            font-family: "Press Start 2P", cursive;
+            font-size: 0.5rem;
         }
 
         /* Responsive */
         @media (max-width: 768px) {
             header h1 { 
-                font-size: 2rem; 
+                font-size: 1rem; 
             }
             h2 { 
-                font-size: 1.6rem; 
+                font-size: 0.8rem; 
+            }
+            .text {
+                font-size: 0.6rem;
             }
         }
 
         @media (max-width: 600px) {
             header h1 { 
-                font-size: 1.6rem; 
+                font-size: 0.8rem; 
             }
             h2 { 
-                font-size: 1.4rem; 
+                font-size: 0.7rem; 
             }
             .card { 
-                padding: 20px; 
+                padding: 15px; 
+            }
+            .btn {
+                padding: 8px 12px;
+                font-size: 0.5rem;
             }
         }
     </style>
@@ -507,37 +446,26 @@
 <body>
 
 <header>
-    <h1>RODRIGO SEBASTIAN SALGADO HUAMÁN</h1>
-    <p>« Estilo Rocket League • Administración de Empresas • Liderazgo »</p>
+    <h1>RODRIGO SEBASTIAN<br>SALGADO HUAMÁN</h1>
+    <p>ADMINISTRACIÓN DE EMPRESAS • LIDERAZGO • INNOVACIÓN</p>
 </header>
 
 <div class="container">
 
-    <!-- Selector de fuentes graffiti -->
-    <div class="font-selector">
-        <strong style="font-family: var(--pixel-font); color: var(--primary);">ESCOGE TU ESTILO GRAFFITI:</strong>
-        <div style="margin-top: 10px;">
-            <span class="font-option active" onclick="changeFont('rubik')">RUBIK WET PAINT</span>
-            <span class="font-option" onclick="changeFont('monoton')">MONOTON</span>
-            <span class="font-option" onclick="changeFont('press')">PRESS START 2P</span>
-        </div>
-    </div>
-
     <!-- Navegación rápida -->
     <div class="nav-container">
-        <div class="nav-item active" onclick="scrollToSection('presentacion')">Presentación</div>
-        <div class="nav-item" onclick="scrollToSection('datos')">Datos</div>
-        <div class="nav-item" onclick="scrollToSection('cursos')">Cursos</div>
-        <div class="nav-item" onclick="scrollToSection('habilidades')">Habilidades</div>
-        <div class="nav-item" onclick="scrollToSection('equipo')">Equipo</div>
-        <div class="nav-item" onclick="scrollToSection('proyectos')">Proyectos</div>
+        <div class="nav-item active" onclick="scrollToSection('presentacion')">PRESENTACIÓN</div>
+        <div class="nav-item" onclick="scrollToSection('datos')">DATOS</div>
+        <div class="nav-item" onclick="scrollToSection('cursos')">CURSOS</div>
+        <div class="nav-item" onclick="scrollToSection('habilidades')">HABILIDADES</div>
+        <div class="nav-item" onclick="scrollToSection('equipo')">EQUIPO</div>
+        <div class="nav-item" onclick="scrollToSection('proyectos')">PROYECTOS</div>
     </div>
 
-    <!-- Resto del contenido permanece igual -->
     <!-- Presentación -->
     <section class="card" id="presentacion">
         <div class="orb"></div>
-        <h2>Mi Presentación</h2>
+        <h2>MI PRESENTACIÓN</h2>
 
         <div class="hero-image-wrapper">
             <img class="hero-image"
@@ -546,69 +474,181 @@
         </div>
 
         <p class="text" style="text-align:center;">
-            « En los negocios como en Rocket League: estrategia, precisión y trabajo en equipo son la clave del éxito. »
+            « LA ESTRATEGIA, LA PRECISIÓN Y EL TRABAJO EN EQUIPO SON LA CLAVE DEL ÉXITO »
         </p>
 
         <div class="info-grid">
             <div class="info-item">
-                <h3>Mi Filosofía</h3>
+                <h3>MI FILOSOFÍA</h3>
                 <p>Creo en la gestión estratégica, la innovación constante y el desarrollo de equipos de alto rendimiento.</p>
             </div>
             <div class="info-item">
-                <h3>Mi Objetivo</h3>
+                <h3>MI OBJETIVO</h3>
                 <p>Liderar empresas hacia la excelencia operativa y el crecimiento sostenible.</p>
             </div>
             <div class="info-item">
-                <h3>Mi Pasión</h3>
-                <p>Los negocios, la estrategia corporativa y, por supuesto, Rocket League.</p>
+                <h3>MI PASIÓN</h3>
+                <p>Los negocios, la estrategia corporativa y el desarrollo profesional.</p>
             </div>
         </div>
 
         <center>
-            <a class="btn" href="#datos">Ver mis datos</a>
-            <a class="btn btn-primary" href="#proyectos">Proyectos Empresariales</a>
+            <a class="btn" href="#datos">VER MIS DATOS</a>
+            <a class="btn btn-primary" href="#proyectos">PROYECTOS</a>
         </center>
     </section>
 
-    <!-- Resto de las secciones... -->
-    <!-- (El contenido de las demás secciones permanece igual) -->
+    <!-- Datos -->
+    <section class="card" id="datos">
+        <div class="orb"></div>
+        <h2>DATOS DEL ESTUDIANTE</h2>
+
+        <div class="info-grid">
+            <div class="info-item">
+                <h3>NOMBRE COMPLETO</h3>
+                <p>Rodrigo Sebastian Salgado Huamán</p>
+            </div>
+            <div class="info-item">
+                <h3>CARRERA</h3>
+                <p>Administración de Empresas</p>
+            </div>
+            <div class="info-item">
+                <h3>UNIVERSIDAD</h3>
+                <p>Universidad Católica San Pablo</p>
+            </div>
+            <div class="info-item">
+                <h3>INTERESES</h3>
+                <p>Estrategia empresarial, finanzas, emprendimiento, tecnología</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cursos -->
+    <section class="card" id="cursos">
+        <div class="orb"></div>
+        <h2>CURSOS ACTUALES</h2>
+
+        <div class="course-item">
+            <div class="course-name">APRECIACIÓN MUSICAL</div>
+            <div class="course-teacher">DOCENTE: JORGE LOVÓN</div>
+        </div>
+        
+        <div class="course-item">
+            <div class="course-name">OPERACIONES FINANCIERAS</div>
+            <div class="course-teacher">DOCENTE: YVAN NAMOC</div>
+        </div>
+        
+        <div class="course-item">
+            <div class="course-name">CIENCIAS DE LA COMPUTACIÓN</div>
+            <div class="course-teacher">DOCENTE: EDUARDO CUADROS</div>
+        </div>
+    </section>
+
+    <!-- Habilidades -->
+    <section class="card" id="habilidades">
+        <div class="orb"></div>
+        <h2>MIS HABILIDADES</h2>
+
+        <div class="progress-container">
+            <div class="progress-label">
+                <span>ANÁLISIS FINANCIERO</span>
+                <span>85%</span>
+            </div>
+            <div class="progress-bar">
+                <div class="progress-fill" style="width: 85%"></div>
+            </div>
+        </div>
+
+        <div class="progress-container">
+            <div class="progress-label">
+                <span>GESTIÓN DE PROYECTOS</span>
+                <span>80%</span>
+            </div>
+            <div class="progress-bar">
+                <div class="progress-fill" style="width: 80%"></div>
+            </div>
+        </div>
+
+        <div class="progress-container">
+            <div class="progress-label">
+                <span>PLANIFICACIÓN ESTRATÉGICA</span>
+                <span>75%</span>
+            </div>
+            <div class="progress-bar">
+                <div class="progress-fill" style="width: 75%"></div>
+            </div>
+        </div>
+
+        <div class="progress-container">
+            <div class="progress-label">
+                <span>LIDERAZGO DE EQUIPOS</span>
+                <span>90%</span>
+            </div>
+            <div class="progress-bar">
+                <div class="progress-fill" style="width: 90%"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Equipo -->
+    <section class="card" id="equipo">
+        <div class="orb"></div>
+        <h2>MI EQUIPO DE TRABAJO</h2>
+
+        <p class="text" style="text-align: center; margin-bottom: 20px;">
+            EL TRABAJO EN EQUIPO ES FUNDAMENTAL PARA ALCANZAR LOS OBJETIVOS
+        </p>
+
+        <div class="team-grid">
+            <div class="team-member">
+                <div class="member-avatar">LL</div>
+                <h3 class="member-name">LUIGGI LUNA</h3>
+                <p class="member-role">ESPECIALISTA EN FINANZAS</p>
+            </div>
+            <div class="team-member">
+                <div class="member-avatar">JG</div>
+                <h3 class="member-name">JHAIR GAMARRA</h3>
+                <p class="member-role">ESTRATEGA DE MARKETING</p>
+            </div>
+            <div class="team-member">
+                <div class="member-avatar">FC</div>
+                <h3 class="member-name">FABIAN CAYO</h3>
+                <p class="member-role">ANALISTA DE OPERACIONES</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Proyectos -->
+    <section class="card" id="proyectos">
+        <div class="orb"></div>
+        <h2>PROYECTOS EMPRESARIALES</h2>
+
+        <div class="info-grid">
+            <div class="info-item">
+                <h3>PLAN DE NEGOCIO TECH</h3>
+                <p>Desarrollo de modelo de negocio, proyecciones financieras y estrategia de mercado para empresa emergente.</p>
+                <a class="btn" style="padding: 4px 8px; font-size: 0.5rem; margin-top: 8px;" href="#">VER PROYECTO</a>
+            </div>
+            <div class="info-item">
+                <h3>OPTIMIZACIÓN LOGÍSTICA</h3>
+                <p>Análisis y mejora de procesos logísticos para reducir costos operativos en 15%.</p>
+                <a class="btn" style="padding: 4px 8px; font-size: 0.5rem; margin-top: 8px;" href="#">VER PROYECTO</a>
+            </div>
+            <div class="info-item">
+                <h3>EXPANSIÓN INTERNACIONAL</h3>
+                <p>Plan de entrada a nuevos mercados con análisis de riesgo y oportunidades.</p>
+                <a class="btn" style="padding: 4px 8px; font-size: 0.5rem; margin-top: 8px;" href="#">VER PROYECTO</a>
+            </div>
+        </div>
+    </section>
 
 </div>
 
 <footer>
-    © 2025 Rodrigo Sebastian Salgado Huamán • Universidad Católica San Pablo • Inspirado en Rocket League
+    © 2025 RODRIGO SEBASTIAN SALGADO HUAMÁN • UNIVERSIDAD CATÓLICA SAN PABLO
 </footer>
 
 <script>
-    // Función para cambiar entre fuentes graffiti
-    function changeFont(fontType) {
-        const root = document.documentElement;
-        
-        // Remover clase activa de todas las opciones
-        document.querySelectorAll('.font-option').forEach(option => {
-            option.classList.remove('active');
-        });
-        
-        // Agregar clase activa a la opción seleccionada
-        event.target.classList.add('active');
-        
-        // Cambiar la fuente según la selección
-        switch(fontType) {
-            case 'rubik':
-                root.style.setProperty('--graffiti-font', "'Rubik Wet Paint', cursive");
-                root.style.setProperty('--graffiti-font-alt', "'Monoton', cursive");
-                break;
-            case 'monoton':
-                root.style.setProperty('--graffiti-font', "'Monoton', cursive");
-                root.style.setProperty('--graffiti-font-alt', "'Rubik Wet Paint', cursive");
-                break;
-            case 'press':
-                root.style.setProperty('--graffiti-font', "'Press Start 2P', cursive");
-                root.style.setProperty('--graffiti-font-alt', "'Press Start 2P', cursive");
-                break;
-        }
-    }
-
     // Función para desplazarse suavemente a una sección
     function scrollToSection(sectionId) {
         document.getElementById(sectionId).scrollIntoView({
