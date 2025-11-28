@@ -1,78 +1,123 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Rodrigo Sebastian Salgado Huamán - Página Oficial</title>
+
     <!-- SEO -->
-    <title>Rodrigo Sebastian Salgado Huaman - Página Oficial</title>
-    <meta name="description" content="Página oficial de Rodrigo Sebastian Salgado Huaman. Información personal, proyectos, estudios y contacto.">
-    <meta name="author" content="Rodrigo Sebastian Salgado Huaman">
+    <meta name="description" content="Página oficial de Rodrigo Sebastian Salgado Huamán. Información personal, formación, proyectos y equipo.">
+    <meta name="keywords" content="Rodrigo Salgado Huaman, portafolio, estudiante, desarrollador, página oficial">
+    <meta name="author" content="Rodrigo Sebastian Salgado Huamán" />
 
     <!-- Estilos -->
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: "Trebuchet MS", Arial, sans-serif;
             margin: 0;
-            background: #f2f2f2;
+            background: url('https://images.pexels.com/photos/47730/the-ball-stadion-football-the-pitch-47730.jpeg') no-repeat center center fixed;
+            background-size: cover;
             color: #222;
         }
 
+        /* Encabezado */
         header {
-            background: #1a1a1a;
-            color: #fff;
+            background: #a80000;
+            color: white;
             padding: 40px 20px;
             text-align: center;
+            border-bottom: 3px solid white;
+            font-family: 'Georgia', serif;
         }
 
-        h1 {
+        header h1 {
+            font-size: 38px;
             margin: 0;
-            font-size: 2.4em;
-            font-weight: bold;
+            letter-spacing: 3px;
         }
 
+        header p {
+            margin-top: 10px;
+            font-size: 18px;
+            opacity: 0.9;
+        }
+
+        /* Contenedor general */
+        .container {
+            max-width: 900px;
+            margin: 30px auto;
+            padding: 20px;
+        }
+
+        /* Tarjetas blancas */
+        .card {
+            background: rgba(255, 255, 255, 0.93);
+            padding: 30px;
+            border-radius: 20px;
+            margin-bottom: 30px;
+            border: 2px solid #e6a1a1;
+            box-shadow: 0 0 15px rgba(0,0,0,0.2);
+            position: relative;
+        }
+
+        /* Pelotitas decorativas */
+        .ball {
+            width: 40px;
+            height: 40px;
+            position: absolute;
+            top: -20px;
+            right: -20px;
+        }
+
+        /* Títulos */
         h2 {
             text-align: center;
-            margin-top: 40px;
-            font-size: 1.8em;
+            color: #b00000;
+            font-family: 'Georgia', serif;
+            font-size: 28px;
+            margin-top: 0;
         }
 
-        .section {
-            max-width: 900px;
-            margin: auto;
-            background: white;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px #ccc;
-            margin-top: 30px;
+        /* Texto y listas */
+        .text {
+            font-size: 18px;
+            line-height: 1.7;
         }
 
-        .info {
-            font-size: 1.1em;
-            line-height: 1.6em;
-        }
-
-        .projects ul {
+        ul {
+            font-size: 17px;
+            line-height: 1.9;
             padding-left: 20px;
-            line-height: 1.8em;
         }
 
+        /* Botones */
+        .btn {
+            display: inline-block;
+            padding: 12px 25px;
+            background: #b30000;
+            color: white;
+            text-decoration: none;
+            border-radius: 20px;
+            font-size: 16px;
+            margin-top: 20px;
+            transition: 0.3s;
+        }
+        .btn:hover {
+            background: #7a0000;
+        }
+
+        /* Footer */
         footer {
+            background: #a80000;
+            color: white;
             text-align: center;
             padding: 20px;
             margin-top: 40px;
-            background: #222;
-            color: #fff;
+            border-top: 3px solid white;
+            font-size: 16px;
         }
 
-        a {
-            color: #007bff;
-            text-decoration: none;
-        }
-
-        a:hover {
-            text-decoration: underline;
-        }
     </style>
 </head>
 
@@ -80,44 +125,68 @@
 
     <!-- Encabezado -->
     <header>
-        <h1>Rodrigo Sebastian Salgado Huaman</h1>
-        <p>Estudiante y desarrollador web en formación</p>
+        <h1>RODRIGO SEBASTIAN SALGADO HUAMÁN</h1>
+        <p>« Estudiante Universitario - Con pasión y dedicación »</p>
     </header>
 
-    <!-- Sobre mí -->
-    <section class="section">
-        <h2>Sobre mí</h2>
-        <p class="info">
-            Hola, soy <strong>Rodrigo Sebastian Salgado Huaman</strong>. 
-            Esta es mi página personal creada con GitHub Pages. Aquí podrás conocer más sobre mí, mis proyectos, mis estudios y mis objetivos profesionales.
-        </p>
-    </section>
+    <div class="container">
 
-    <!-- Proyectos -->
-    <section class="section projects">
-        <h2>Proyectos</h2>
-        <p class="info">Algunos de mis trabajos e intereses incluyen:</p>
-        <ul>
-            <li>Desarrollo web con HTML, CSS y JavaScript</li>
-            <li>Aplicaciones responsivas</li>
-            <li>Proyectos académicos</li>
-            <li>Automatización y herramientas digitales</li>
-        </ul>
-    </section>
+        <!-- Mi Equipo / Portada -->
+        <div class="card">
+            <img src="https://cdn-icons-png.flaticon.com/512/833/833314.png" class="ball">
+            <h2>Mi Presentación</h2>
+            <center>
+                <img src="https://images.pexels.com/photos/313738/pexels-photo-313738.jpeg" width="300" style="border-radius:15px; box-shadow:0 0 10px #222;">
+            </center>
+            <p class="text" style="text-align:center; margin-top:20px;">
+                « La disciplina es la clave para alcanzar nuestras metas »
+            </p>
 
-    <!-- Contacto -->
-    <section class="section">
-        <h2>Contacto</h2>
-        <p class="info">
-            Puedes contactarme a través de mis redes sociales o correo.<br>
-            📧 <strong>tu-correo@ejemplo.com</strong><br>
-            🌐 GitHub: <a href="https://github.com/">https://github.com/</a>
-        </p>
-    </section>
+            <center>
+                <a class="btn" href="#formacion">Ver Mi Formación</a>
+            </center>
+        </div>
+
+        <!-- Datos -->
+        <div class="card" id="formacion">
+            <img src="https://cdn-icons-png.flaticon.com/512/833/833314.png" class="ball">
+            <h2>Datos del Estudiante</h2>
+            <p class="text">
+                <strong>Nombre:</strong> RODRIGO SEBASTIAN SALGADO HUAMÁN<br><br>
+                <strong>Carrera:</strong> Estudiante universitario<br><br>
+                <strong>Universidad:</strong> (Agrega tu universidad aquí)<br>
+            </p>
+        </div>
+
+        <!-- Cursos -->
+        <div class="card">
+            <img src="https://cdn-icons-png.flaticon.com/512/833/833314.png" class="ball">
+            <h2>Cursos Actuales</h2>
+
+            <ul>
+                <li><strong>Curso 1:</strong> Profesor X</li>
+                <li><strong>Curso 2:</strong> Profesor Y</li>
+                <li><strong>Curso 3:</strong> Profesor Z</li>
+            </ul>
+        </div>
+
+        <!-- Equipo -->
+        <div class="card">
+            <img src="https://cdn-icons-png.flaticon.com/512/833/833314.png" class="ball">
+            <h2>Compañeros de Equipo</h2>
+
+            <center>
+                <a class="btn">Compañero 1</a>
+                <a class="btn">Compañero 2</a>
+                <a class="btn">Compañero 3</a>
+            </center>
+        </div>
+
+    </div>
 
     <!-- Footer -->
     <footer>
-        © 2025 - Página oficial de Rodrigo Sebastian Salgado Huaman
+        © 2025 Rodrigo Sebastian Salgado Huamán | Página Oficial • Con esfuerzo y dedicación
     </footer>
 
 </body>
